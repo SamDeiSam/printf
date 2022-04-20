@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * prinlunt - prints a long unsigned integer
+ * prinlunt - function prints a long unsigned integer
  * @arguments: number to print
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
@@ -18,9 +18,9 @@ int prinlunt(va_list arguments, char *buf, unsigned int ibuf)
 		div *= 10;
 		int_temp /= 10;
 	}
-	for (i = 0; div > 0; div /= 10, ++)
+	for (i = 0; div > 0; div /= 10, i++)
 	{
-		ibuf = handl_buf(buf, ((int_in / div) % 10) + '0' ibuf);
+		ibuf = handl_buf(buf, ((int_in / div) % 10) + '0', ibuf);
 	}
 	return (i);
 }
